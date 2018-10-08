@@ -13,22 +13,23 @@ function scuberGreetingForFeet(distance) {
 
 function ternaryCheckCity(city) {
   let message;
-  if (city === "NYC" ) {
-    message = 'Ok, sounds good.';
-  } else {
-    message = 'No go.';
-  }
+  message = city === "NYC" ? 'Ok, sounds good.': 'No go.';
   return message;
 }
 
 function switchOnCharmFromTip(tip) {
   let message;
-  if (tip === "generous") {
-    message = 'Thank you so much.';
-  } else if (tip === "not as generous") {
-    message = 'Thank you.';
-  } else {
-    message = 'Bye.';
+  switch (tip) {
+    case "generous":
+      message = 'Thank you so much.';
+      break;
+    case "not as generous":
+      message = 'Thank you.';
+      break;
+    default:
+      message = 'Bye.';
+      break;
   }
+
   return message;
 }
